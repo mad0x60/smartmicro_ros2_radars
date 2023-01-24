@@ -1,3 +1,16 @@
+# Note: this is a stripped down version of the ros2 radar driver for ARM devices!
+
++ It does NOT include the following:
+    - Docker files
+    - Simulation files
+
++ The Makefile.txt file was modified to use the ARM binaries.
+
++ The radar.template.yaml was adapted to a single umrr96 sensor.
+
+To use it: run the smart_extract.sh script which will download some binaries in umrr_ros2_driver/smartmicro directory. Then you can remove all the x86 and windows binaries.
+
+
 # ROS2 smartmicro radar driver
 
 [![Build and test](https://github.com/smartmicro/smartmicro_ros2_radars/actions/workflows/dockerbuild.yml/badge.svg)](https://github.com/smartmicro/smartmicro_ros2_radars/actions/workflows/dockerbuild.yml)
