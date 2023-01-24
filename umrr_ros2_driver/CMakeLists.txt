@@ -46,17 +46,17 @@ endif()
 ament_auto_find_build_dependencies()
 
 # specify the path to search for the libraries
-link_directories(${CMAKE_CURRENT_SOURCE_DIR}/smartmicro/lib-linux-x86_64-gcc_9)
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/smartmicro/lib-linux-armv8-gcc_9)
 
 install(FILES
-    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-x86_64-gcc_9/libsmart_access.so"
-    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-x86_64-gcc_9/libosal.so"
-    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-x86_64-gcc_9/libcom_lib.so"
-    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-x86_64-gcc_9/libbasev1.0.2_user_interface.so"
-    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-x86_64-gcc_9/libumrr11_t132_automotivev1.1.1_user_interface.so"
-    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-x86_64-gcc_9/libumrr96_t153_automotivev1.2.1_user_interface.so"
-    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-x86_64-gcc_9/libumrr9f_t169_automotivev1.1.1_user_interface.so"
-    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-x86_64-gcc_9/libumrr9d_t152_automotivev1.0.2_user_interface.so"
+    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-armv8-gcc_9/libsmart_access.so"
+    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-armv8-gcc_9/libosal.so"
+    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-armv8-gcc_9/libcom_lib.so"
+    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-armv8-gcc_9/libbasev1.0.2_user_interface.so"
+    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-armv8-gcc_9/libumrr11_t132_automotivev1.1.1_user_interface.so"
+    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-armv8-gcc_9/libumrr96_t153_automotivev1.2.1_user_interface.so"
+    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-armv8-gcc_9/libumrr9f_t169_automotivev1.1.1_user_interface.so"
+    "${PROJECT_SOURCE_DIR}/smartmicro/lib-linux-armv8-gcc_9/libumrr9d_t152_automotivev1.0.2_user_interface.so"
 DESTINATION lib)
 
 set(LIB_PATH "${CMAKE_INSTALL_PREFIX}/lib")
@@ -83,7 +83,7 @@ smartmicro/include/umrr96_t153_automotive_v1_2_1
 smartmicro/include/umrr9f_t169_automotive_v1_1_1
 smartmicro/include/umrr9d_t152_automotive_v1_0_2)
 
-# link smart_access_lib-linux-x86_64-gcc_9 to the node
+# link smart_access_lib-linux-armv8-gcc_9 to the node
 target_link_libraries(smartmicro_radar_node
     smart_access
     nlohmann_json::nlohmann_json
